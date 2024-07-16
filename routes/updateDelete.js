@@ -3,6 +3,7 @@ const express=require('express'); //call library express
 const udRoute=express.Router();
 const connection=require('../db');
 
+<<<<<<< HEAD
 udRoute.put('/users/:uid', function (req, res, next) {
     const { product_name, quantity, location, supplier, expiry_date } = req.body;
     const { uid } = req.params;
@@ -28,6 +29,19 @@ udRoute.put('/users/:uid', function (req, res, next) {
 
 
 
+=======
+udRoute.put('/users/:uid',function(req,res,next){
+    connection.execute("UPDATE Users_tbl SET name=?,tel=?,updated_at=? WHERE id=?;",
+        [req.body.name,req.body.tel,Date.now(),req.params.uid]).then(()=>{
+            console.log('ok');
+        }).catch((err)=>{
+            console.log(err);
+        });
+        res.status(200).send("Update Successfully.");
+
+});
+
+>>>>>>> a2786c820de5eaecc1066185dfb491f2c749d735
 udRoute.delete('/users/:uid',function(req,res,next){
     connection.execute("DELETE FROM Users_tbl WHERE id=?;",
         [req.params.uid]).then(()=>{
