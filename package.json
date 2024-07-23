@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-<<<<<<< HEAD
+
     "body-parser": "^1.20.2",
     "crypto": "^1.0.1",
     "express": "^4.19.2",
@@ -19,11 +19,11 @@
     "nodemon": "^3.1.4"
   }
 }
-=======
+
     "crypto": "^1.0.1",
     "express": "^4.19.2",
     "mysql2": "^3.10.2",
     "nodemon": "^3.1.4"
   }
 }
->>>>>>> a2786c820de5eaecc1066185dfb491f2c749d735
+
